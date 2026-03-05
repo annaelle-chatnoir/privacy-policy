@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>規約・ポリシー - しゃのそら</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -100,8 +103,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         h2 {
@@ -118,7 +128,8 @@
             color: #4facfe;
         }
 
-        p, ul {
+        p,
+        ul {
             margin-bottom: 20px;
         }
 
@@ -147,112 +158,137 @@
         }
 
         @media (max-width: 600px) {
-            header { padding: 40px 20px; }
-            .header-content h1 { font-size: 1.8rem; }
-            .content-card { padding: 25px; }
-            .nav-tabs { flex-direction: column; align-items: stretch; margin-top: -20px; }
-            .tab-btn { border-radius: 12px; }
+            header {
+                padding: 40px 20px;
+            }
+
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-card {
+                padding: 25px;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+                align-items: stretch;
+                margin-top: -20px;
+            }
+
+            .tab-btn {
+                border-radius: 12px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <div class="header-content">
-        <h1>しゃのそら</h1>
-        <p>クリーンで、心地よい。猫が届ける気象予報。</p>
+    <header>
+        <div class="header-content">
+            <h1>しゃのそら</h1>
+            <p>クリーンで、心地よい。猫が届ける気象予報。</p>
+        </div>
+    </header>
+
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="showTab('policy')">プライバシーポリシー</button>
+        <button class="tab-btn" onclick="showTab('terms')">利用規約</button>
     </div>
-</header>
 
-<div class="nav-tabs">
-    <button class="tab-btn active" onclick="showTab('policy')">プライバシーポリシー</button>
-    <button class="tab-btn" onclick="showTab('terms')">利用規約</button>
-</div>
+    <main>
+        <!-- プライバシーポリシー -->
+        <section id="policy" class="content-card active">
+            <h2>プライバシーポリシー</h2>
+            <p>『しゃのそら』（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限の注意を払っています。本アプリでは、広告配信を一切行わず、ユーザーデータの収集を最小限に留めています。</p>
 
-<main>
-    <!-- プライバシーポリシー -->
-    <section id="policy" class="content-card active">
-        <h2>プライバシーポリシー</h2>
-        <p>『しゃのそら』（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限の注意を払っています。本アプリでは、広告配信を一切行わず、ユーザーデータの収集を最小限に留めています。</p>
+            <h3>第1条（収集する情報とその目的）</h3>
+            <ul>
+                <li><strong>位置情報</strong>：現在地の気象情報を取得するためにのみ使用します。位置情報はお使いの端末内でのみ処理され、当方のサーバーに送信・蓄積されることはありません。</li>
+                <li><strong>購入履歴</strong>：有料コンテンツ（「猫の種類の追加」「黒猫プレミアム」等）の購入状態を管理し、機種変更時の復元（リストア）を行うために利用します。Appleが発行する匿名の識別子を利用し、氏名やクレジットカード情報を当方が取得することはありません。
+                </li>
+            </ul>
 
-        <h3>第1条（収集する情報とその目的）</h3>
-        <ul>
-            <li><strong>位置情報</strong>：現在地の気象情報を取得するためにのみ使用します。位置情報はお使いの端末内でのみ処理され、当方のサーバーに送信・蓄積されることはありません。</li>
-            <li><strong>購入履歴</strong>：有料コンテンツ（「猫の種類の追加」「黒猫プレミアム」等）の購入状態を管理し、機種変更時の復元（リストア）を行うために利用します。Appleが発行する匿名の識別子を利用し、氏名やクレジットカード情報を当方が取得することはありません。</li>
-        </ul>
+            <h3>第2条（第三者への提供）</h3>
+            <p>本アプリは、以下の外部サービスを利用して機能を提供します。</p>
+            <ul>
+                <li>Apple WeatherKit: 気象データの取得</li>
+                <li>Apple StoreKit: アプリ内課金の決済および管理</li>
+            </ul>
 
-        <h3>第2条（第三者への提供）</h3>
-        <p>本アプリは、以下の外部サービスを利用して機能を提供します。</p>
-        <ul>
-            <li>Apple WeatherKit: 気象データの取得</li>
-            <li>Apple StoreKit: アプリ内課金の決済および管理</li>
-        </ul>
+            <h3>第3条（データの保存と管理）</h3>
+            <p>本アプリは、ユーザーの個人情報を独自のサーバーに保存しません。すべてのデータはお使いの端末内、またはAppleが提供する安全なインフラストラクチャ内でのみ処理・保存されます。</p>
 
-        <h3>第3条（データの保存と管理）</h3>
-        <p>本アプリは、ユーザーの個人情報を独自のサーバーに保存しません。すべてのデータはお使いの端末内、またはAppleが提供する安全なインフラストラクチャ内でのみ処理・保存されます。</p>
+            <h3>第4条（データの削除について）</h3>
+            <p>本アプリをアンインストールすることで、端末内の設定データは削除されます。購入履歴の管理については、Apple IDの管理画面より行っていただく必要があります。</p>
 
-        <h3>第4条（データの削除について）</h3>
-        <p>本アプリをアンインストールすることで、端末内の設定データは削除されます。購入履歴の管理については、Apple IDの管理画面より行っていただく必要があります。</p>
+            <h3>第5条（免責事項およびサービスの変更）</h3>
+            <p>本アプリは外部の気象APIサービスを利用して機能を提供しております。外部サービスの提供状況、料金改定、または利用規約の変更により、事前の予告なく一部機能の提供を終了、または有料機能の提供形態を変更する場合がございます。
+            </p>
+            <p>また、本アプリが提供する気象情報等の正確性については万全を期しておりますが、気象予報の性質上、その完全性を保証するものではありません。情報の利用により生じた損害について、開発者は一切の責任を負いません。</p>
+        </section>
 
-        <h3>第5条（免責事項）</h3>
-        <p>本アプリが提供する情報の正確性については万全を期しておりますが、気象予報の性質上、その完全性を保証するものではありません。情報の利用により生じた損害について、開発者は一切の責任を負いません。</p>
-    </section>
+        <!-- 利用規約 -->
+        <section id="terms" class="content-card">
+            <h2>利用規約</h2>
+            <h3>第1条（本アプリの提供と利用）</h3>
+            <ul>
+                <li>本アプリは、気象予報データに基づき、服装の目安をイラストで提示するサービスです。</li>
+                <li>本アプリは広告を一切含まず、クリーンな環境で提供されます。</li>
+                <li>利用にはインターネット通信が必要であり、通信料は利用者の負担となります。</li>
+            </ul>
 
-    <!-- 利用規約 -->
-    <section id="terms" class="content-card">
-        <h2>利用規約</h2>
-        <h3>第1条（本アプリの提供と利用）</h3>
-        <ul>
-            <li>本アプリは、気象予報データに基づき、服装の目安をイラストで提示するサービスです。</li>
-            <li>本アプリは広告を一切含まず、クリーンな環境で提供されます。</li>
-            <li>利用にはインターネット通信が必要であり、通信料は利用者の負担となります。</li>
-        </ul>
+            <h3>第2条（利用料金と課金）</h3>
+            <ul>
+                <li>本アプリの基本機能は無料ですが、追加機能（「猫の種類増加」「黒猫プレミアム」等）を利用するには、アプリ内課金（以下「本課金」）が必要です。</li>
+                <li>本課金は<strong>「買い切り方式」</strong>であり、<strong>本アプリの現在のメジャーバージョン（Ver
+                        1.x系列）において</strong>対象機能が永続的に提供されるものです。</li>
+                <li><strong>将来のメジャーアップデート（Ver
+                        2.0以降など）による大幅な新機能の追加、または外部API（気象データ等）の仕様変更・有料化対応の際には、継続利用のために別途アップグレード料金（新アプリの購入や新規課金）が必要となる場合があります。</strong>
+                </li>
+                <li>決済および返金はApp Storeの規約に準じます。本開発者は直接の返金対応を行いません。</li>
+            </ul>
 
-        <h3>第2条（利用料金と課金）</h3>
-        <ul>
-            <li>本アプリの基本機能は無料ですが、追加機能（「猫の種類増加」「黒猫プレミアム」等）を利用するには、アプリ内課金（以下「本課金」）が必要です。</li>
-            <li>本課金は<strong>「買い切り方式」</strong>であり、一度の購入で対象の機能が永続的に提供されます。ただし、将来のOS仕様変更やAPIの提供終了等により、機能を維持できなくなる場合はこの限りではありません。</li>
-            <li>決済および返金はApp Storeの規約に準じます。本開発者は直接の返金対応を行いません。</li>
-        </ul>
+            <h3>第3条（知的財産権）</h3>
+            <p>本アプリに含まれるすべての猫のイラスト、デザイン、プログラム等の著作権は本開発者に帰属します。私的利用の範囲を超えた複製、転載、改変、再配布を禁じます。</p>
 
-        <h3>第3条（知的財産権）</h3>
-        <p>本アプリに含まれるすべての猫のイラスト、デザイン、プログラム等の著作権は本開発者に帰属します。私的利用の範囲を超えた複製、転載、改変、再配布を禁じます。</p>
+            <h3>第4条（免責事項）</h3>
+            <ul>
+                <li><strong>予報の正確性</strong>：本アプリのアドバイスはApple
+                    WeatherKitのデータに基づく目安であり、正確性や完全性を保証しません。最終的な服装の判断は利用者自身の責任で行ってください。</li>
+                <li><strong>損害賠償</strong>：本アプリの利用により生じた損害（体調不良、家財の汚損、機会損失等）について、本開発者は一切の責任を負いません。</li>
+                <li><strong>賠償額の上限</strong>：本開発者が責任を負う場合であっても、その額は当該利用者が本アプリで支払った購入金額を上限とします。</li>
+            </ul>
 
-        <h3>第4条（免責事項）</h3>
-        <ul>
-            <li><strong>予報の正確性</strong>：本アプリのアドバイスはApple WeatherKitのデータに基づく目安であり、正確性や完全性を保証しません。最終的な服装の判断は利用者自身の責任で行ってください。</li>
-            <li><strong>損害賠償</strong>：本アプリの利用により生じた損害（体調不良、家財の汚損、機会損失等）について、本開発者は一切の責任を負いません。</li>
-            <li><strong>賠償額の上限</strong>：本開発者が責任を負う場合であっても、その額は当該利用者が本アプリで支払った購入金額を上限とします。</li>
-        </ul>
+            <h3>第5条（サービスの中断・終了・変更）</h3>
+            <p>保守、天災、利用APIの停止<strong>および規約変更・ビジネスモデルの転換</strong>、その他やむを得ない事情により、予告なくサービスを中断または終了、あるいは提供形態を変更することがあります。これに伴う補償や返金は致しかねます。
+            </p>
 
-        <h3>第5条（サービスの中断・終了）</h3>
-        <p>保守、天災、利用APIの停止、その他やむを得ない事情により、予告なくサービスを中断または終了することがあります。これに伴う補償は致しかねます。</p>
+            <p>附則：2026年3月4日 制定</p>
+        </section>
+    </main>
 
-        <p>附則：2026年3月4日 制定</p>
-    </section>
-</main>
+    <div class="footer">
+        <p>© 2026 しゃのそら Development Team</p>
+        <p>Published by annaelle-chatnoir</p>
+    </div>
 
-<div class="footer">
-    <p>© 2026 しゃのそら Development Team</p>
-    <p>Published by annaelle-chatnoir</p>
-</div>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.content-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
 
-<script>
-    function showTab(tabId) {
-        document.querySelectorAll('.content-card').forEach(card => {
-            card.classList.remove('active');
-        });
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        
-        document.getElementById(tabId).classList.add('active');
-        if (event) {
+            document.getElementById(tabId).classList.add('active');
             event.currentTarget.classList.add('active');
+            window.scrollTo({ top: 150, behavior: 'smooth' });
         }
-        window.scrollTo({ top: 150, behavior: 'smooth' });
-    }
-</script>
+    </script>
 
 </body>
+
 </html>
