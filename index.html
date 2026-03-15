@@ -1,294 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>規約・ポリシー - しゃのそら</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
-        rel="stylesheet">
-    <style>
-        :root {
-            --primary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --accent-sun: #FFB347;
-            --text-main: #2D3748;
-            --text-sub: #718096;
-            --bg-glass: rgba(255, 255, 255, 0.85);
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>しゃのそら プライバシーポリシー</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --card: #fffaf2;
+      --text: #3f3428;
+      --sub: #6c5f52;
+      --accent: #c18b2f;
+      --line: #e3d8c8;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Inter', 'Noto Sans JP', -apple-system, sans-serif;
-            background: #f0f4f8;
-            color: var(--text-main);
-            line-height: 1.8;
-            min-height: 100vh;
-        }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: linear-gradient(180deg, #efe4d3 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.8;
+    }
 
-        header {
-            background: var(--primary-gradient);
-            padding: 60px 20px;
-            text-align: center;
-            color: white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
 
-        .header-content h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-        }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 8px 30px rgba(63, 52, 40, 0.06);
+    }
 
-        .header-content p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      line-height: 1.3;
+    }
 
-        .nav-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: -30px;
-            padding: 0 20px;
-        }
+    .lead {
+      margin: 0 0 24px;
+      color: var(--sub);
+      font-size: 0.98rem;
+    }
 
-        .tab-btn {
-            background: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 700;
-            color: var(--text-sub);
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
+    h2 {
+      margin-top: 32px;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
 
-        .tab-btn.active {
-            color: #4facfe;
-            box-shadow: 0 4px 20px rgba(79, 172, 254, 0.3);
-        }
+    p, li {
+      font-size: 0.98rem;
+    }
 
-        .tab-btn:hover {
-            transform: translateY(-2px);
-        }
+    ul {
+      padding-left: 1.2rem;
+      margin: 8px 0 0;
+    }
 
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px 80px;
-        }
+    .footer {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--sub);
+      font-size: 0.92rem;
+    }
 
-        .content-card {
-            background: var(--bg-glass);
-            backdrop-filter: blur(10px);
-            padding: 50px;
-            border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
-            display: none;
-        }
-
-        .content-card.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h2 {
-            font-size: 1.6rem;
-            margin-bottom: 24px;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #4facfe;
-            display: inline-block;
-        }
-
-        h3 {
-            font-size: 1.2rem;
-            margin: 32px 0 16px;
-            color: #4facfe;
-        }
-
-        p,
-        ul {
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 12px;
-            list-style: none;
-            padding-left: 1.5em;
-            position: relative;
-        }
-
-        li::before {
-            content: "•";
-            color: #4facfe;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            position: absolute;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 40px;
-            color: var(--text-sub);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                padding: 40px 20px;
-            }
-
-            .header-content h1 {
-                font-size: 1.8rem;
-            }
-
-            .content-card {
-                padding: 25px;
-            }
-
-            .nav-tabs {
-                flex-direction: column;
-                align-items: stretch;
-                margin-top: -20px;
-            }
-
-            .tab-btn {
-                border-radius: 12px;
-            }
-        }
-    </style>
+    a {
+      color: var(--accent);
+    }
+  </style>
 </head>
-
 <body>
+  <main class="wrap">
+    <section class="card">
+      <h1>しゃのそら プライバシーポリシー</h1>
+      <p class="lead">本プライバシーポリシーは、アプリ「しゃのそら」（以下「本アプリ」）における利用者情報の取扱いについて定めるものです。</p>
 
-    <header>
-        <div class="header-content">
-            <h1>しゃのそら</h1>
-            <p>クリーンで、心地よい。猫が届ける気象予報。</p>
-        </div>
-    </header>
+      <h2>1. 取得する情報</h2>
+      <p>本アプリでは、以下の情報を取得または利用する場合があります。</p>
+      <ul>
+        <li>位置情報: 現在地の天気予報を表示するため</li>
+        <li>アプリ内設定情報: キャラクター設定、検索履歴に関する制御、利用状態の保存のため</li>
+        <li>課金情報: プレミアム機能の提供状態を確認するため</li>
+      </ul>
 
-    <div class="nav-tabs">
-        <button class="tab-btn active" onclick="showTab('policy')">プライバシーポリシー</button>
-        <button class="tab-btn" onclick="showTab('terms')">利用規約</button>
-    </div>
+      <h2>2. 位置情報の利用について</h2>
+      <p>本アプリは、現在地に応じた天気情報を表示するために位置情報を利用します。取得した位置情報は、天気情報の取得以外の目的では利用しません。</p>
 
-    <main>
-        <!-- プライバシーポリシー -->
-        <section id="policy" class="content-card active">
-            <h2>プライバシーポリシー</h2>
-            <p>『しゃのそら』（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限の注意を払っています。本アプリでは、広告配信を一切行わず、ユーザーデータの収集を最小限に留めています。</p>
+      <h2>3. 情報の利用目的</h2>
+      <ul>
+        <li>天気予報および服装提案の表示</li>
+        <li>過去天気機能、比較機能の提供</li>
+        <li>アプリ内設定の保存</li>
+        <li>プレミアム会員機能の提供および購入状態の確認</li>
+        <li>不具合対応およびサービス改善</li>
+      </ul>
 
-            <h3>第1条（収集する情報とその目的）</h3>
-            <ul>
-                <li><strong>位置情報</strong>：現在地の気象情報を取得するためにのみ使用します。位置情報はお使いの端末内でのみ処理され、当方のサーバーに送信・蓄積されることはありません。</li>
-                <li><strong>購入履歴</strong>：有料コンテンツ（「猫の種類の追加」「黒猫プレミアム」等）の購入状態を管理し、機種変更時の復元（リストア）を行うために利用します。Appleが発行する匿名の識別子を利用し、氏名やクレジットカード情報を当方が取得することはありません。
-                </li>
-            </ul>
+      <h2>4. 第三者提供</h2>
+      <p>本アプリは、法令に基づく場合を除き、取得した情報を第三者へ提供しません。</p>
 
-            <h3>第2条（第三者への提供）</h3>
-            <p>本アプリは、以下の外部サービスを利用して機能を提供します。</p>
-            <ul>
-                <li>Apple WeatherKit: 気象データの取得</li>
-                <li>Apple StoreKit: アプリ内課金の決済および管理</li>
-            </ul>
+      <h2>5. 外部サービスについて</h2>
+      <p>本アプリは、天気情報の提供およびアプリ内課金機能のために、Apple が提供するサービス等の外部サービスを利用する場合があります。これらのサービスにおける情報の取扱いについては、各提供事業者の定めるプライバシーポリシーをご確認ください。</p>
 
-            <h3>第3条（データの保存と管理）</h3>
-            <p>本アプリは、ユーザーの個人情報を独自のサーバーに保存しません。すべてのデータはお使いの端末内、またはAppleが提供する安全なインフラストラクチャ内でのみ処理・保存されます。</p>
+      <h2>6. 情報の管理</h2>
+      <p>本アプリは、取得した情報の漏えい、滅失または毀損の防止その他安全管理のために、合理的な範囲で必要な措置を講じます。</p>
 
-            <h3>第4条（データの削除について）</h3>
-            <p>本アプリをアンインストールすることで、端末内の設定データは削除されます。購入履歴の管理については、Apple IDの管理画面より行っていただく必要があります。</p>
+      <h2>7. 利用者による設定変更</h2>
+      <p>位置情報の利用は、端末の設定画面からいつでも変更または停止できます。課金状態の確認およびサブスクリプションの管理は、Apple Account の設定画面から行えます。</p>
 
-            <h3>第5条（免責事項およびサービスの変更）</h3>
-            <p>本アプリは外部の気象APIサービスを利用して機能を提供しております。外部サービスの提供状況、料金改定、または利用規約の変更により、事前の予告なく一部機能の提供を終了、または有料機能の提供形態を変更する場合がございます。
-            </p>
-            <p>また、本アプリが提供する気象情報等の正確性については万全を期しておりますが、気象予報の性質上、その完全性を保証するものではありません。情報の利用により生じた損害について、開発者は一切の責任を負いません。</p>
-        </section>
+      <h2>8. 子どもの利用について</h2>
+      <p>本アプリは、年齢を問わず利用できますが、保護者の方は必要に応じて端末設定や課金設定をご確認ください。</p>
 
-        <!-- 利用規約 -->
-        <section id="terms" class="content-card">
-            <h2>利用規約</h2>
-            <h3>第1条（本アプリの提供と利用）</h3>
-            <ul>
-                <li>本アプリは、気象予報データに基づき、服装の目安をイラストで提示するサービスです。</li>
-                <li>本アプリは広告を一切含まず、クリーンな環境で提供されます。</li>
-                <li>利用にはインターネット通信が必要であり、通信料は利用者の負担となります。</li>
-            </ul>
+      <h2>9. 本ポリシーの変更</h2>
+      <p>本ポリシーの内容は、必要に応じて変更することがあります。重要な変更がある場合は、合理的な方法でお知らせします。</p>
 
-            <h3>第2条（利用料金と課金）</h3>
-            <ul>
-                <li>本アプリの基本機能は無料ですが、追加機能（「猫の種類増加」「黒猫プレミアム」等）を利用するには、アプリ内課金（以下「本課金」）が必要です。</li>
-                <li>本課金は<strong>「買い切り方式」</strong>であり、<strong>本アプリの現在のメジャーバージョン（Ver
-                        1.x系列）において</strong>対象機能が永続的に提供されるものです。</li>
-                <li><strong>将来のメジャーアップデート（Ver
-                        2.0以降など）による大幅な新機能の追加、または外部API（気象データ等）の仕様変更・有料化対応の際には、継続利用のために別途アップグレード料金（新アプリの購入や新規課金）が必要となる場合があります。</strong>
-                </li>
-                <li>決済および返金はApp Storeの規約に準じます。本開発者は直接の返金対応を行いません。</li>
-            </ul>
+      <h2>10. お問い合わせ</h2>
+      <p>本ポリシーに関するお問い合わせは、GitHub Pages の公開元またはアプリ配信ページ記載の連絡先をご利用ください。</p>
 
-            <h3>第3条（知的財産権）</h3>
-            <p>本アプリに含まれるすべての猫のイラスト、デザイン、プログラム等の著作権は本開発者に帰属します。私的利用の範囲を超えた複製、転載、改変、再配布を禁じます。</p>
-
-            <h3>第4条（免責事項）</h3>
-            <ul>
-                <li><strong>予報の正確性</strong>：本アプリのアドバイスはApple
-                    WeatherKitのデータに基づく目安であり、正確性や完全性を保証しません。最終的な服装の判断は利用者自身の責任で行ってください。</li>
-                <li><strong>損害賠償</strong>：本アプリの利用により生じた損害（体調不良、家財の汚損、機会損失等）について、本開発者は一切の責任を負いません。</li>
-                <li><strong>賠償額の上限</strong>：本開発者が責任を負う場合であっても、その額は当該利用者が本アプリで支払った購入金額を上限とします。</li>
-            </ul>
-
-            <h3>第5条（サービスの中断・終了・変更）</h3>
-            <p>保守、天災、利用APIの停止<strong>および規約変更・ビジネスモデルの転換</strong>、その他やむを得ない事情により、予告なくサービスを中断または終了、あるいは提供形態を変更することがあります。これに伴う補償や返金は致しかねます。
-            </p>
-
-            <p>附則：2026年3月4日 制定</p>
-        </section>
-    </main>
-
-    <div class="footer">
-        <p>© 2026 しゃのそら Development Team</p>
-        <p>Published by annaelle-chatnoir</p>
-    </div>
-
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.content-card').forEach(card => {
-                card.classList.remove('active');
-            });
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
-            window.scrollTo({ top: 150, behavior: 'smooth' });
-        }
-    </script>
-
+      <div class="footer">
+        <p>制定日: 2026年3月15日</p>
+        <p>アプリ名: しゃのそら</p>
+      </div>
+    </section>
+  </main>
 </body>
-
 </html>
